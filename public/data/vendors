@@ -15,6 +15,7 @@
     },
     {
         "vendorId": "G1",
-        "creditBal": 0.0
+        "creditBal": 0.0,
+        "vendorName": "G1 Services"
     }
 ]

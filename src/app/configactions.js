@@ -8,8 +8,7 @@ export default {
     setConfigURL: (url) => {
         console.log(url)
         return (dispatch) => {
-            console.log(dispatch)
             dispatch({ type: actions.SET_CONFIG_URL, payload: url });
         };
-    },
+    }
 }

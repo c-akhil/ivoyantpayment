@@ -16,4 +16,11 @@ export default class HttpSevice {
     static post(url, requestBody = {}, options = {}) {
         return this.http.post(url, requestBody, options)
     }
+
+    static getURL(url, params = {}, options = {}) {
+        return Axios.get(url, { params })
+    }
+    static postURL(url, requestBody = {}, options = {}) {
+        return Axios.post(url, requestBody, options)
+    }
 }

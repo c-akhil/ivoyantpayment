@@ -1,13 +1,21 @@
+import actionConstants from '../actions'
+
 const initialState = {
-    invloceList: [],
+    invoicelist: [],
+    vendorslist: []
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case 'setInvoiceList':
+        case actionConstants.SET_INVOICE_LIST:
             return {
                 ...state,
-                configURL: action.payload
+                invoicelist: action.payload
+            };
+        case actionConstants.SET_VENDORS_LIST:
+            return {
+                ...state,
+                vendorslist: action.payload
             };
         default:
             return state;
