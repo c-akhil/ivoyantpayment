@@ -1,0 +1,21 @@
+{
+    "tableConfig": {
+        "paymentEnabled": false,
+        "adjustEnabled": true,
+        "columns": [
+            {
+                "fieldName": "vendorId",
+                "displayName": "Vendor ID",
+                "display": false,
+                "filteringEnabled": false,
+                "sortingEnabled": true
+            }
+        ]
+    },
+    "dataEndPoints": {
+        "call2": {},
+        "call3": {},
+        "creditPost": {},
+        "paymentPost": {}
+    }
+}

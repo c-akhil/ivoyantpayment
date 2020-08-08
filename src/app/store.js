@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import invoiceListReducer from './table/invoicelistreducer';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    invoiceList: invoiceListReducer,
   },
 });
