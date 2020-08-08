@@ -22,6 +22,7 @@ class App extends React.Component {
     console.log(this.props)
     this.getConfig()
   }
+
   async getConfig() {
     if (this.props?.config?.configURL)
       await Axios.get(this.props?.config?.configURL).then(config => {
@@ -29,6 +30,11 @@ class App extends React.Component {
         this.props.setConfig(config.data)
       })
     else this.props.history.push('config');
+  }
+  componentDidUpdate(prevProp) {
+    if (this.props?.config?.configURL != prevProp?.config?.configURL)
+      this.getConfig()
+
   }
 
   render() {

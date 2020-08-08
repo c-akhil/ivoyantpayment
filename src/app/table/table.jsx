@@ -50,7 +50,7 @@ class TableComponet extends React.Component {
             httpSevice.getURL(this.props?.config?.config?.dataEndPoints?.call2).then(res => {
                 this.props.setInvoiceList(res.data)
             })
-        if (this.props?.config?.config?.dataEndPoints?.call3 != this.props?.config?.config?.dataEndPoints?.call3)
+        if (this.props?.config?.config?.dataEndPoints?.call3 != prevProp?.config?.config?.dataEndPoints?.call3)
             httpSevice.getURL(this.props?.config?.config?.dataEndPoints?.call3).then(res => {
                 this.props.setVendorsList(res.data)
             })
