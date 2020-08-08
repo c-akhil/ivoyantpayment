@@ -6,22 +6,30 @@ import {
 import TableComponet from './app/table/table';
 import ProfileComponet from './app/pages/profiliepage';
 import LoginComponet from './app/pages/loginpage';
+import ConfigComponent from './app/pages/configpage';
 import LayoutComponet from './app/layout/layout';
 import 'antd/dist/antd.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <LayoutComponet>
-        <Switch>
-          <Route exact path="/" component={TableComponet} />
-          <Route path="/login" component={LoginComponet} />
-          <Route path="/profile" component={ProfileComponet} />
-        </Switch>
-      </LayoutComponet>
-    </div>
-  );
+class App extends React.Component {
+
+  componentWillMount() {
+
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <LayoutComponet>
+          <Switch>
+            <Route exact path="/" component={TableComponet} />
+            <Route path="/config" component={ConfigComponent} />
+          </Switch>
+        </LayoutComponet>
+      </div>
+    );
+  }
 }
+
 
 export default App;

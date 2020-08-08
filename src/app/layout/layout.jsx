@@ -3,9 +3,10 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 import {
     UserOutlined,
     BarsOutlined,
-    PoweroffOutlined
+    SettingOutlined
 } from '@ant-design/icons';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { Input } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 class LayoutComponet extends React.Component {
@@ -28,14 +29,9 @@ class LayoutComponet extends React.Component {
             icon: <BarsOutlined />
         },
         {
-            label: 'Profile',
-            route: 'profile',
-            icon: <UserOutlined />
-        },
-        {
-            label: 'Logout',
-            route: 'login',
-            icon: <PoweroffOutlined />
+            label: 'Config',
+            route: 'config',
+            icon: <SettingOutlined />
         }
     ];
 
@@ -48,8 +44,6 @@ class LayoutComponet extends React.Component {
                         {this.menuList.map((menu, index) => <Menu.Item key={"menuItem" + index}
                             onClick={() => {
                                 let path = menu.route || '';
-                                // this.props.router.push(menu.route || '')
-                                // Router.
                                 this.props.history.push(path);
                                 console.log('menu', menu)
                             }}
@@ -60,7 +54,6 @@ class LayoutComponet extends React.Component {
                     </Menu>
                 </Sider>
                 <Layout className="site-layout">
-                    <Header className="site-layout-background" style={{ padding: 0 }} />
                     <Content style={{ margin: '0 16px' }}>
                         <Breadcrumb style={{ margin: '16px 0' }}>
                             <Breadcrumb.Item>User</Breadcrumb.Item>
